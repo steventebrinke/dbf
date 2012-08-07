@@ -1,3 +1,7 @@
+# 1.7.8
+  - [#44] Require FasterCSV on all platforms
+  - Remove rdoc development dependency
+
 # 1.7.5
   - fixes FoxPro currency (Y) fields
 
