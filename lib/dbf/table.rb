@@ -241,11 +241,7 @@ module DBF
       original_pos = @data.pos
       byte = @data.read(1)
       @data.seek(original_pos)
-      !printable_ascii_chars.include?(byte.ord)
-    end
-
-    def printable_ascii_chars # nodoc
-      32..127
+      byte.ord == 13
     end
 
     def foxpro? # nodoc
