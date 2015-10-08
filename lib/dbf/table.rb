@@ -238,9 +238,9 @@ module DBF
     end
 
     def end_of_record? # nodoc
-      pos = @data.pos
+      original_pos = @data.pos
       byte = @data.read(1)
-      @data.seek(pos)
+      @data.seek(original_pos)
       !printable_ascii_chars.include?(byte[0].ord)
     end
 
