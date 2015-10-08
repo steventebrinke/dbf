@@ -241,7 +241,7 @@ module DBF
       original_pos = @data.pos
       byte = @data.read(1)
       @data.seek(original_pos)
-      !printable_ascii_chars.include?(byte[0].ord)
+      !printable_ascii_chars.include?(byte.ord)
     end
 
     def printable_ascii_chars # nodoc
